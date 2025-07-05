@@ -1,0 +1,74 @@
+import java.util.List;
+import java.util.ArrayList;
+public class PaginationResultVO<T> {
+    private Long totalCount;
+    private Integer pageSize;
+    private Integer pageNo;
+    private Long pageTotal;
+    private List<T> list = new ArrayList<>();
+
+    public PaginationResultVO(Long totalCount, Integer pageSize, Integer pageNo, List<T> list) {
+        this.totalCount = totalCount;
+        this.pageSize = pageSize;
+        this.pageNo = pageNo;
+        this.list = list;
+    }
+
+    public PaginationResultVO(Long totalCount, Integer pageSize, Integer pageNo, Long pageTotal, List<T> list) {
+        this.totalCount = totalCount;
+        this.pageSize = pageSize;
+        if (pageNo == 0) {
+            pageNo = 1;
+        }
+
+        this.pageTotal = pageTotal;
+        this.list = list;
+    }
+
+
+    public PaginationResultVO(List<T> list) {
+        this.list = list;
+    }
+
+    public PaginationResultVO() {}
+
+    public Long getTotalCount() {
+        return totalCount;
+    }
+
+    public void setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+    }
+
+    public Integer getPageSize() {
+        return pageSize;
+    }
+
+    public void setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+    }
+
+    public Integer getPageNo() {
+        return pageNo;
+    }
+
+    public void setPageNo(Integer pageNo) {
+        this.pageNo = pageNo;
+    }
+
+    public Long getPageTotal() {
+        return pageTotal;
+    }
+
+    public void setPageTotal(Long pageTotal) {
+        this.pageTotal = pageTotal;
+    }
+
+    public List<T> getList() {
+        return list;
+    }
+
+    public void setList(List<T> list) {
+        this.list = list;
+    }
+}
