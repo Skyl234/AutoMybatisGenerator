@@ -8,6 +8,7 @@
     <artifactId>AutoMybatis</artifactId>
     <version>1.0</version>
     <packaging>pom</packaging>
+    <description>提供工具依赖，驱动依赖和日志依赖</description>
     <modules>
         <module>Generator</module>
     </modules>
