@@ -29,7 +29,7 @@ public class PropertiesUtils {
             });
 
         }catch (Exception e){
-
+            e.printStackTrace();
         }finally {
             if(inputStream!=null){
                 try {
